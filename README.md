@@ -1,1 +1,1 @@
-# transfer-learning-image-classification
+# visual-defect-detection-transfer-learning
