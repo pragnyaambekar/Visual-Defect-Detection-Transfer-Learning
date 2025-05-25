@@ -28,4 +28,4 @@ It can be downloaded from the following link: https://www.mvtec.com/company/rese
 ### Team Members:
 [Ankita Maria John](https://github.com/ankita-m-john)\
 [Pragnya Ambekar](https://github.com/pragnyaambekar)\
-[Jayalakshmi Sasidharan](https://github.com/jayalakshmi-sasidharan)\
+[Jayalakshmi Sasidharan](https://github.com/jayalakshmi-sasidharan)
