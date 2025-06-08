@@ -172,3 +172,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+#Dataset files and folders
+mvtec_ad_evaluation.tar.xz
+mvtec_anomaly_detection
+mvtec_anomaly_detection.tar.xz
