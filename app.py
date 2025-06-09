@@ -10,7 +10,7 @@ from pytorch_grad_cam.utils.image import show_cam_on_image
 
 # ---- Page Config ----
 st.set_page_config(page_title="Visual Defect Detector", layout="wide")
-st.markdown("<h1 style='text-align: center;'>🔍 Visual Defect Detection with Grad-CAM</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>Visual Defect Detection with Grad-CAM</h1>", unsafe_allow_html=True)
 
 # ---- Device ----
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -28,7 +28,7 @@ def load_model():
     try:
         model.load_state_dict(torch.load("model.pth", map_location=device))
     except FileNotFoundError:
-        st.error("❌ Model file not found. Please make sure 'model.pth' exists.")
+        st.error("Model file not found. Please make sure 'model.pth' exists.")
     model.eval()
     return model.to(device)
 
@@ -79,8 +79,8 @@ if uploaded_file:
     # ---- Display Results ----
     col_spacer1, col_main, col_spacer2 = st.columns([1, 2, 1])
     with col_main:
-        st.markdown("### 🧪 Prediction Results", unsafe_allow_html=True)
-        st.markdown(f"#### 🔍 Predicted: **{label}**", unsafe_allow_html=True)
+        st.markdown("###Prediction Results", unsafe_allow_html=True)
+        st.markdown(f"#### Predicted: **{label}**", unsafe_allow_html=True)
         st.markdown(f"Confidence: `{confidence:.2%}`")
         st.markdown(f"Confidence - GOOD: `{probs[0]:.2%}`, DEFECTIVE: `{probs[1]:.2%}`")
 
@@ -93,10 +93,6 @@ if uploaded_file:
             st.markdown("##### Grad-CAM Visualization")
             st.image(cam_overlay, width=300)
 
-        # ---- Save Option ----
-        if st.checkbox("💾 Save Grad-CAM image"):
-            Image.fromarray(cam_overlay).save("gradcam_result.png")
-            st.success("Saved as `gradcam_result.png` ✅")
-
+        
 # ---- Footer ----
 st.markdown("<hr><p style='text-align:center;'>Built by Pragnya Ambekar • CSS 586 Final Project</p>", unsafe_allow_html=True)
